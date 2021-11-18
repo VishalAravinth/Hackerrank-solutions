@@ -1,0 +1,41 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+class Student{
+    int age,standard;
+    string fname,lname;
+    public:
+    void set_age(int n){    age = n;}
+    void set_first_name(string firstname){  fname = firstname;}
+    void set_last_name(string lastname){    lname = lastname;}
+    void set_standard(int n){   standard = n;}
+    void get_age(){ cout<<age<<endl;}
+    void get_first_name(){  cout<<fname<<endl;}
+    void get_last_name(){   cout<<lname;}
+    void get_standard(){    cout<<standard<<endl;}
+    void to_string(){   cout<<age<<","<<fname<<","<<lname<<","<<standard;}
+};
+
+int main() {
+    int age, standard;
+    string first_name, last_name;
+    
+    cin >> age >> first_name >> last_name >> standard;
+    
+    Student st;
+    st.set_age(age);
+    st.set_standard(standard);
+    st.set_first_name(first_name);
+    st.set_last_name(last_name);
+
+    st.get_age();
+    st.get_last_name(); 
+    cout<< ", ";
+    st.get_first_name();
+    st.get_standard();
+    cout<<endl;
+    st.to_string();
+    
+    return 0;
+}
